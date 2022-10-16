@@ -2,7 +2,7 @@
 /**
 *main - this is the main function
 *description - the starting piont of the progarm
-* return : always 0
+*return : always return 0
 */
 int main(viod)
 {
