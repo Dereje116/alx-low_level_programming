@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/*
- * main - printing thhe input
+/**
+ * main - Entry piont
  *
  * Return: Always 0 (Success)
  */
