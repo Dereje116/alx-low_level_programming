@@ -2,9 +2,9 @@
 /**
  *main - this is the main function
  *description - the starting piont of the progarm
- */
+*/
 int main(viod)
 {
-	puts("programming is like building lingualpuzzel");
+	puts("Programming is like building a multilingual puzzle");
 	return (0);
 }
