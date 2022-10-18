@@ -1,28 +1,26 @@
-# 1 "2-print_alphabet_x10.c"
+# 1 "3-islower.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "2-print_alphabet_x10.c"
+# 1 "3-islower.c"
 # 1 "main.h" 1
 
 
 int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
-# 2 "2-print_alphabet_x10.c" 2
+int _islower(int c);
+# 2 "3-islower.c" 2
 
 
 
 
-void print_alphabet_x10(void)
+int _islower(int c)
 {
- int count = 0;
- char letter;
-
- while (count++ <= 9)
-  for (letter = 'a'; letter <= 'z'; letter++)
-   _putchar(letter);
-  _putchar('\n');
+ if (c >= 'a' && c <= 'z')
+  return (1);
+ else
+  return (0);
 }
