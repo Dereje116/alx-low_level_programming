@@ -29,8 +29,12 @@ print_last_digit:
 	subl	%eax, %edx
 	movl	%edx, %eax
 	movl	%eax, -4(%rbp)
-	addl	$48, -4(%rbp)
+	cmpl	$0, -4(%rbp)
+	jns	.L2
+	negl	-4(%rbp)
+.L2:
 	movl	-4(%rbp), %eax
+	addl	$48, %eax
 	movsbl	%al, %eax
 	movl	%eax, %edi
 	call	_putchar@PLT
