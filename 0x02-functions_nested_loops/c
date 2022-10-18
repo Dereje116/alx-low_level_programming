@@ -1,10 +1,10 @@
-# 1 "6-abs.c"
+# 1 "7-print_last_digit.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "6-abs.c"
+# 1 "7-print_last_digit.c"
 # 1 "main.h" 1
 
 
@@ -15,12 +15,20 @@ int _islower(int c);
 int _isalpha(int c);
 int print_sign(int n);
 int _abs(int);
-# 2 "6-abs.c" 2
-# 10 "6-abs.c"
-int _abs(int n)
+int print_last_digit(int);
+# 2 "7-print_last_digit.c" 2
+
+
+
+
+
+
+
+int print_last_digit(int n)
 {
- if (n >= 0)
-  return (n);
- else
-  return (-n);
+ int last_digit;
+
+ last_digit = n % 10;
+
+ return (last_digit);
 }
