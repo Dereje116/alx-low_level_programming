@@ -1,2 +1,1 @@
-this is function in c
-
+the amazing thing about c
