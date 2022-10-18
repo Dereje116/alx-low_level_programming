@@ -1,10 +1,10 @@
-# 1 "7-print_last_digit.c"
+# 1 "8-24_hours.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "7-print_last_digit.c"
+# 1 "8-24_hours.c"
 # 1 "main.h" 1
 
 
@@ -16,23 +16,42 @@ int _isalpha(int c);
 int print_sign(int n);
 int _abs(int);
 int print_last_digit(int);
-# 2 "7-print_last_digit.c" 2
+void jack_bauer(void);
+# 2 "8-24_hours.c" 2
 
 
 
 
 
 
-
-int print_last_digit(int n)
+void jack_bauer(void)
 {
- int last_digit;
+ int a, b, c, d, e;
 
- last_digit = n % 10;
-
- last_digit = last_digit + '0';
-
- _putchar(last_digit);
-
- return (last_digit);
+ for (a = 0; a <= 2; a++)
+ {
+  for (b = 0; b <= 9; b++)
+  {
+   for (c = 0; c <= 3; c++)
+   {
+    for (d = 0; d <= 5; d++)
+    {
+     for (e = 0; e <= 9; e++)
+     {
+      _putchar(a);
+      if (a <= 1)
+      {
+       _putchar(b);
+      }
+      else
+       _putchar(c);
+      _putchar(':');
+      _putchar(d);
+      _putchar(e);
+      _putchar('\n');
+     }
+    }
+   }
+  }
+ }
 }
