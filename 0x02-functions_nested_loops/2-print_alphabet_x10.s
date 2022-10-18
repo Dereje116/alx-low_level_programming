@@ -27,11 +27,12 @@ print_alphabet_x10:
 .L3:
 	cmpb	$122, -5(%rbp)
 	jle	.L4
-	addl	$1, -4(%rbp)
 .L2:
-	cmpl	$10, -4(%rbp)
+	movl	-4(%rbp), %eax
+	leal	1(%rax), %edx
+	movl	%edx, -4(%rbp)
+	cmpl	$9, %eax
 	jle	.L5
-	addl	$1, -4(%rbp)
 	movl	$10, %edi
 	call	_putchar@PLT
 	nop
