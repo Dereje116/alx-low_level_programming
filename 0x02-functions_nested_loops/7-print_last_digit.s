@@ -33,8 +33,8 @@ print_last_digit:
 	jns	.L2
 	negl	-4(%rbp)
 .L2:
+	addl	$48, -4(%rbp)
 	movl	-4(%rbp), %eax
-	addl	$48, %eax
 	movsbl	%al, %eax
 	movl	%eax, %edi
 	call	_putchar@PLT
