@@ -30,9 +30,8 @@ print_last_digit:
 	movl	%edx, %eax
 	movl	%eax, -4(%rbp)
 	movl	-4(%rbp), %eax
-	movsbl	%al, %eax
 	movl	%eax, %edi
-	call	_putchar@PLT
+	call	print@PLT
 	movl	-4(%rbp), %eax
 	leave
 	.cfi_def_cfa 7, 8

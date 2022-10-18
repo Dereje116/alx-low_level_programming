@@ -16,6 +16,7 @@ int _isalpha(int c);
 int print_sign(int n);
 int _abs(int);
 int print_last_digit(int);
+int print(int n);
 # 2 "7-print_last_digit.c" 2
 
 
@@ -29,7 +30,7 @@ int print_last_digit(int n)
  int last_digit;
 
  last_digit = n % 10;
- _putchar(last_digit);
+ print(last_digit);
 
  return (last_digit);
 }
