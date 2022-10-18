@@ -11,71 +11,95 @@ jack_bauer:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	subq	$32, %rsp
-	movl	$0, -20(%rbp)
-	jmp	.L2
-.L13:
-	movl	$0, -16(%rbp)
-	jmp	.L3
-.L12:
-	movl	$0, -12(%rbp)
-	jmp	.L4
-.L11:
+	subq	$16, %rsp
 	movl	$0, -8(%rbp)
-	jmp	.L5
-.L10:
+	jmp	.L2
+.L5:
 	movl	$0, -4(%rbp)
-	jmp	.L6
-.L9:
-	movl	-20(%rbp), %eax
+	jmp	.L3
+.L4:
+	movl	-8(%rbp), %eax
+	movslq	%eax, %rdx
+	imulq	$1717986919, %rdx, %rdx
+	shrq	$32, %rdx
+	sarl	$2, %edx
+	sarl	$31, %eax
+	subl	%eax, %edx
+	movl	%edx, %eax
+	movl	%eax, %edx
+	movl	%edx, %eax
+	addl	%eax, %eax
+	addl	%edx, %eax
+	sall	$4, %eax
 	movsbl	%al, %eax
 	movl	%eax, %edi
 	call	_putchar@PLT
-	cmpl	$1, -20(%rbp)
-	jg	.L7
-	movl	-16(%rbp), %eax
+	movl	-8(%rbp), %ecx
+	movslq	%ecx, %rax
+	imulq	$1717986919, %rax, %rax
+	shrq	$32, %rax
+	movl	%eax, %edx
+	sarl	$2, %edx
+	movl	%ecx, %eax
+	sarl	$31, %eax
+	subl	%eax, %edx
+	movl	%edx, %eax
+	sall	$2, %eax
+	addl	%edx, %eax
+	addl	%eax, %eax
+	subl	%eax, %ecx
+	movl	%ecx, %edx
+	movl	%edx, %eax
+	addl	%eax, %eax
+	addl	%edx, %eax
+	sall	$4, %eax
 	movsbl	%al, %eax
 	movl	%eax, %edi
 	call	_putchar@PLT
-	jmp	.L8
-.L7:
-	movl	-12(%rbp), %eax
-	movsbl	%al, %eax
-	movl	%eax, %edi
-	call	_putchar@PLT
-.L8:
 	movl	$58, %edi
 	call	_putchar@PLT
-	movl	-8(%rbp), %eax
+	movl	-4(%rbp), %eax
+	movslq	%eax, %rdx
+	imulq	$1717986919, %rdx, %rdx
+	shrq	$32, %rdx
+	sarl	$2, %edx
+	sarl	$31, %eax
+	subl	%eax, %edx
+	movl	%edx, %eax
+	addl	$48, %eax
 	movsbl	%al, %eax
 	movl	%eax, %edi
 	call	_putchar@PLT
-	movl	-4(%rbp), %eax
+	movl	-4(%rbp), %ecx
+	movslq	%ecx, %rax
+	imulq	$1717986919, %rax, %rax
+	shrq	$32, %rax
+	movl	%eax, %edx
+	sarl	$2, %edx
+	movl	%ecx, %eax
+	sarl	$31, %eax
+	subl	%eax, %edx
+	movl	%edx, %eax
+	sall	$2, %eax
+	addl	%edx, %eax
+	addl	%eax, %eax
+	subl	%eax, %ecx
+	movl	%ecx, %edx
+	movl	%edx, %eax
+	addl	$48, %eax
 	movsbl	%al, %eax
 	movl	%eax, %edi
 	call	_putchar@PLT
 	movl	$10, %edi
 	call	_putchar@PLT
 	addl	$1, -4(%rbp)
-.L6:
-	cmpl	$9, -4(%rbp)
-	jle	.L9
-	addl	$1, -8(%rbp)
-.L5:
-	cmpl	$5, -8(%rbp)
-	jle	.L10
-	addl	$1, -12(%rbp)
-.L4:
-	cmpl	$3, -12(%rbp)
-	jle	.L11
-	addl	$1, -16(%rbp)
 .L3:
-	cmpl	$9, -16(%rbp)
-	jle	.L12
-	addl	$1, -20(%rbp)
+	cmpl	$59, -4(%rbp)
+	jle	.L4
+	addl	$1, -8(%rbp)
 .L2:
-	cmpl	$2, -20(%rbp)
-	jle	.L13
+	cmpl	$23, -8(%rbp)
+	jle	.L5
 	nop
 	nop
 	leave
