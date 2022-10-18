@@ -21,9 +21,7 @@ void jack_bauer(void)
 					{
 						_putchar(a);
 						if (a <= 1)
-						{
 							_putchar(b);
-						}
 						else
 							_putchar(c);
 						_putchar(':');
