@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * _abs - computes the abs value of an int
- * @n: the int
+ * _isalpha - chek for char
+ * @c: the char to be checked
  *
- * Return: the abs of the int.
+ * Return: 1 if char is letter, 0 otherwise.
  */
-int _abs(int c)
+int _isalpha(int c)
 {
-	if (c >= 0)
-		return (c);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
 	else
-		return (-c);
+		return (0);
 }

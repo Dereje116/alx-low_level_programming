@@ -1,8 +1,8 @@
 	.file	"4-isalpha.c"
 	.text
-	.globl	_abs
-	.type	_abs, @function
-_abs:
+	.globl	_isalpha
+	.type	_isalpha, @function
+_isalpha:
 .LFB0:
 	.cfi_startproc
 	endbr64
@@ -12,20 +12,27 @@ _abs:
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
 	movl	%edi, -4(%rbp)
-	cmpl	$0, -4(%rbp)
-	js	.L2
-	movl	-4(%rbp), %eax
-	jmp	.L3
+	cmpl	$96, -4(%rbp)
+	jle	.L2
+	cmpl	$122, -4(%rbp)
+	jle	.L3
 .L2:
-	movl	-4(%rbp), %eax
-	negl	%eax
+	cmpl	$64, -4(%rbp)
+	jle	.L4
+	cmpl	$90, -4(%rbp)
+	jg	.L4
 .L3:
+	movl	$1, %eax
+	jmp	.L5
+.L4:
+	movl	$0, %eax
+.L5:
 	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
 .LFE0:
-	.size	_abs, .-_abs
+	.size	_isalpha, .-_isalpha
 	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
 	.section	.note.GNU-stack,"",@progbits
 	.section	.note.gnu.property,"a"
