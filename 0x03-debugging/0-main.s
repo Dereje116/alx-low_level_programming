@@ -70,7 +70,7 @@ main:
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
 	subq	$16, %rsp
-	movl	$98, -4(%rbp)
+	movl	$0, -4(%rbp)
 	movl	-4(%rbp), %eax
 	movl	%eax, %edi
 	call	positive_or_negative
