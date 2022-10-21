@@ -19,13 +19,13 @@ int main(void)
 	printf("%d is the largest number\n", largest);
 	return (0);
 }
- /**
-  * largest_number - returns the largest of 3 numbers
-  * @a: frist integer
-  * @b: second integer
-  * @c: third integer
-  * Return: largest number
-  */
+/**
+ * largest_number - retruns largest number of three
+ * @a: frist integer
+ * @b: second integer
+ * @c: third integer
+ * Return: the largest number
+ */
 
 int largest_number(int a, int b, int c)
 {
