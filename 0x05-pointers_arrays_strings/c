@@ -1,10 +1,10 @@
-# 1 "5-rev_string.c"
+# 1 "6-puts2.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "5-rev_string.c"
+# 1 "6-puts2.c"
 # 1 "main.h" 1
 
 
@@ -20,22 +20,24 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char*src);
 int _putchar(char c);
-# 2 "5-rev_string.c" 2
+# 2 "6-puts2.c" 2
 
 
 
 
 
 
-void rev_string(chsr *s)
+
+void puts2(char *str)
 {
- char rev = s[0];
- int c = 0;
- int i;
+ int i = 0;
 
- while (s[c] != '\0')
+ for (; str[i] != '\0'; i++)
  {
-  c--;
-  rev = s[i];
-  s[i] = s[c];
-  s[c] = rev;
+  if ((i % 2) == 0)
+   _putchar(str(i));
+  else
+   continue;
+ }
+ _putchar('\n');
+}
