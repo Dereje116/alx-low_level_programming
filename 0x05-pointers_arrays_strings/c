@@ -1,10 +1,10 @@
-# 1 "1-swap.c"
+# 1 "2-strlen.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "1-swap.c"
+# 1 "2-strlen.c"
 # 1 "main.h" 1
 
 
@@ -15,23 +15,26 @@ int _strlen(char *s);
 void _puts(char *str);
 void print_rev(char *s);
 void rev_string(char *s);
-void puts2(chsr *str);
+void puts2(char *str);
 void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char*src);
 int _putchar(char c);
-# 2 "1-swap.c" 2
+# 2 "2-strlen.c" 2
 
 
 
 
 
 
-void swap_int(int *a, int *b)
+int _strlen(char *s)
 {
- int q;
+ int len = 0;
 
- q = *a;
- *a = *b;
- *b = q;
+ while (*s != '\0')
+ {
+  len++;
+  s++;
+ }
+ return (len);
 }
