@@ -1,10 +1,10 @@
-# 1 "2-largest_number.c"
+# 1 "3-print_remaining_days.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "2-largest_number.c"
+# 1 "3-print_remaining_days.c"
 # 1 "main.h" 1
 
 
@@ -733,7 +733,7 @@ void positive_or_negative(int i);
 int largest_number(int a, int b, int c);
 void print_remaining_days(int month, int day, int year);
 int convert_day(int month, int day);
-# 2 "2-largest_number.c" 2
+# 2 "3-print_remaining_days.c" 2
 
 
 
@@ -741,25 +741,28 @@ int convert_day(int month, int day);
 
 
 
-int largest_number(int a, int b, int c)
+void print_remaining_days(int month, int day, int year)
 {
- int largest;
-
- if (a > b)
+ if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
  {
-  if (b > c)
-   largest = a;
-  else if (a > c)
-   largest = a;
-  else
-   largest = c;
+  if (month >= 3 && day >= 60)
+  {
+   day++;
+  }
+
+  printf("Day of the year: %d\n", day);
+  printf("Remaining days: %d\n", 366 - day);
  }
  else
  {
-  if (b < c)
-   largest = c;
+  if (month == 2 && day == 60)
+  {
+   printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
+  }
   else
-   largest = b;
+  {
+   printf("Day of the year: %d\n", day);
+   printf("Remaining days: %d\n", 365 - day);
+  }
  }
- return (largest);
 }
