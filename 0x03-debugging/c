@@ -1,10 +1,13 @@
-# 1 "1-main.c"
+# 1 "2-largest_number.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 31 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 32 "<command-line>" 2
-# 1 "1-main.c"
+# 1 "2-largest_number.c"
+# 1 "main.h" 1
+
+
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -722,7 +725,15 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 873 "/usr/include/stdio.h" 3 4
 
-# 2 "1-main.c" 2
+# 4 "main.h" 2
+
+
+# 5 "main.h"
+void positive_or_negative(int i);
+int largest_number(int a, int b, int c);
+void print_remaining_days(int month, int day, int year);
+int convert_day(int month, int day);
+# 2 "2-largest_number.c" 2
 
 
 
@@ -730,21 +741,25 @@ extern int __overflow (FILE *, int);
 
 
 
-# 8 "1-main.c"
-int main(void)
+int largest_number(int a, int b, int c)
 {
- int i;
+ int largest;
 
- printf("Infinite loop incoming :(\n");
-
- i = 0;
-
-
-
-
-
-
- printf("Infinite loop avoided! \\o/\n");
-
- return (0);
+ if (a > b)
+ {
+  if (b > c)
+   largest = a;
+  else if (a > c)
+   largest = a;
+  else
+   largest = c;
+ }
+ else
+ {
+  if (b < c)
+   largest = c;
+  else
+   largest = b;
+ }
+ return (largest);
 }
