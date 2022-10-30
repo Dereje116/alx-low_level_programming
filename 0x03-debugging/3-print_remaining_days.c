@@ -3,7 +3,7 @@
  * print_remaining_days - print date
  * @month: month fronat
  * @day: day of month
- * @years: year
+ * @year: year
  * Return: void
  */
 void print_remaining_days(int month, int day, int year)
