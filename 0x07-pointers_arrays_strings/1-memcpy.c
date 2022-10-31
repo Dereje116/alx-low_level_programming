@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _memicpy - copies abyte on memory
+ * _memcpy - copies abyte on memory
  * @dest: destination
  * @src: source
  * @n: number of the src
