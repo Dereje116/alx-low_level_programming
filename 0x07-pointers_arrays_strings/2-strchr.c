@@ -5,7 +5,7 @@
  * @c: the character
  * Return: Null or character
  */
-char *_strchr(char *s, char c);
+char *_strchr(char *s, char c)
 {
 	char *p = NULL;
 
